@@ -62,11 +62,19 @@ body {
         display: flex;
         flex-direction: column-reverse;
         height: 53vh;
-        align-items: end;
+        align-items: flex-end;
         padding: 0em 2em 0em 0em;
         font-size: 130%;
+        word-wrap: break-word;
         overflow-wrap: break-word;
         width: 100vw;
+        border: 2px solid green;
+    }
+
+    .display h1 {
+        max-width: 100%; /* Ensures h1 text wraps within the display's width */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .history {
