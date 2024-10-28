@@ -1,0 +1,177 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+.no-select {
+    /* If you want to implement it in very old browser-versions */
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    /* The rule below is not implemented in browsers yet */
+    -o-user-select: none;
+
+    /* The rule below is implemented in most browsers by now */
+    user-select: none;
+}
+
+/* mobile view*/
+@media (max-width: 786px) {
+    .circleButton {
+        border: 2px solid red;
+        width: 15vw;
+        height: 15vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 4em;
+        position: relative;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .circleButton:hover {
+        background-color: aqua;
+    }
+
+    .ChangeCalc {
+        width: 50%;
+    }
+
+    .number {
+        position: absolute;
+        font-size: 230%;
+    }
+
+    .BKP {
+        gap: 1em;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        justify-items: center;
+        margin: 0em 2em 2em 2em;
+    }
+
+    .display {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 53vh;
+        align-items: end;
+        padding: 0em 2em 0em 0em;
+        font-size: 130%;
+    }
+
+    .history {
+        margin: 0.25em 0em;
+    }
+
+    .current {
+        margin: 0.4em 0em 0.9em 0em;
+    }
+}
+
+/* tablet view/small desktop */
+@media (min-width: 769px) {
+    .circleButton {
+        border: 2px solid rgb(147, 0, 0);
+        width: 15vw;
+        height: 15vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 4em;
+        position: relative;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .circleButton:hover {
+        background-color: rgb(0, 116, 116);
+    }
+
+    .ChangeCalc {
+        width: 30%;
+    }
+
+    .number {
+        position: absolute;
+        font-size: 250%;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif;
+    }
+
+    .BKP {
+        gap: 1em;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        justify-items: center;
+        margin: 1em;
+    }
+
+    .display {
+        display: flex;
+        flex-direction: row-reverse;
+        border: 2px solid rgb(147, 0, 0);
+        padding: 0em 2em 0em 2em;
+        margin: 2em 1em;
+        border-radius: 5em;
+    }
+}
+
+/* Large Desktop styles */
+@media (min-width: 1280px) {
+    .circleButton {
+        border: 2px solid rgb(255, 181, 181);
+        width: 15vw;
+        height: 15vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 4em;
+        position: relative;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .circleButton:hover {
+        background-color: rgb(178, 255, 255);
+    }
+
+    .ChangeCalc {
+        width: 30%;
+    }
+
+    .number {
+        position: absolute;
+        font-size: 250%;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif;
+    }
+
+    .BKP {
+        gap: 1em;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        justify-items: center;
+        margin: 1em;
+    }
+
+    .display {
+        display: flex;
+        flex-direction: row-reverse;
+        border: 2px solid rgb(255, 181, 181);
+        padding: 0em 2em 0em 2em;
+        margin: 2em 1em;
+        border-radius: 5em;
+    }
+}
