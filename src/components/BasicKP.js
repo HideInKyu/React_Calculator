@@ -23,16 +23,40 @@ const BasicKeyPad = (props) => {
         console.log(row);
         if (row.length === 3) {
             row.forEach((e) => {
-                buttons.push(<MathButton value={e} />);
+                buttons.push(
+                    <MathButton
+                        value={e}
+                        setCurrentCalc={props.setCurrentCalc}
+
+                    />,
+                );
                 switch (e) {
                     case 9:
-                        buttons.push(<MathButton value={"x"} />);
+                        buttons.push(
+                            <MathButton
+                                value={"x"}
+                                setCurrentCalc={props.setCurrentCalc}
+        
+                            />,
+                        );
                         break;
                     case 6:
-                        buttons.push(<MathButton value={"-"} />);
+                        buttons.push(
+                            <MathButton
+                                value={"-"}
+                                setCurrentCalc={props.setCurrentCalc}
+        
+                            />,
+                        );
                         break;
                     case 3:
-                        buttons.push(<MathButton value={"+"} />);
+                        buttons.push(
+                            <MathButton
+                                value={"+"}
+                                setCurrentCalc={props.setCurrentCalc}
+        
+                            />,
+                        );
                         break;
                 }
             });
@@ -41,9 +65,18 @@ const BasicKeyPad = (props) => {
         if (i === 1) {
             buttons.push(
                 <ChangeCalc img={CalcIcon} />,
-                <MathButton value={"0"} />,
-                <MathButton value={"."} />,
-                <MathButton value={"="} />,
+                <MathButton
+                    value={"0"}
+                    setCurrentCalc={props.setCurrentCalc}
+                />,
+                <MathButton
+                    value={"."}
+                    setCurrentCalc={props.setCurrentCalc}
+                />,
+                <MathButton
+                    value={"="}
+                    setCurrentCalc={props.setCurrentCalc}
+                />,
             );
         }
     }

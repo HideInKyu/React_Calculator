@@ -9,7 +9,12 @@ const App = () => {
 
     useEffect(() => {
         console.log("currentCalc Changed: ", currentCalc);
-        setDisplay(display + currentCalc);
+        if (currentCalc === "CLEAR") {
+            setDisplay("");
+        } else {
+            setDisplay(display + currentCalc);
+            setCurrentCalc("");
+        }
     }, [currentCalc]);
 
     return (
@@ -17,7 +22,6 @@ const App = () => {
             <Display display={display} />
             <BasicKeyPad
                 setCurrentCalc={setCurrentCalc}
-                currentCalc={currentCalc}
                 setDisplay={setDisplay}
             />
         </>

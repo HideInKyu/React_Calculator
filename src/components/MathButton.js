@@ -4,9 +4,11 @@ const MathButton = (props) => {
     const handleClick = () => {
         const setCurrentCalc = props.setCurrentCalc;
         const value = props.value;
-        const currentCalc = props.currentCalc;
-
-        setCurrentCalc(value);
+        if (value === "AC") {
+            setCurrentCalc("CLEAR");
+        } else {
+            setCurrentCalc(value);
+        }
     };
 
     return (
