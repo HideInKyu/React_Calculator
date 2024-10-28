@@ -65,6 +65,8 @@ body {
         align-items: end;
         padding: 0em 2em 0em 0em;
         font-size: 130%;
+        overflow-wrap: break-word;
+        width: 100vw;
     }
 
     .history {

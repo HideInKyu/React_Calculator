@@ -5,11 +5,8 @@ const MathButton = (props) => {
         const setCurrentCalc = props.setCurrentCalc;
         const value = props.value;
         const currentCalc = props.currentCalc;
-        const setDisplay = props.setDisplay;
 
-        setDisplay(value);
         setCurrentCalc(value);
-        
     };
 
     return (
