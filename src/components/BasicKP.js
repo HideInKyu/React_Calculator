@@ -16,43 +16,35 @@ const BasicKeyPad = (props) => {
         );
     }
 
-    for (let i = 9; i > 0; i--) {
-        buttons.push(
-            <MathButton
-                value={i.toString()}
-                setCurrentCalc={props.setCurrentCalc}
-                currentCalc={props.currentCalc}
-            />,
-        );
+    let row = [];
 
-        switch (i) {
-            case 7:
-                buttons.push(
-                    <MathButton
-                        value={"+"}
-                        setCurrentCalc={props.setCurrentCalc}
-                        currentCalc={props.currentCalc}
-                    />,
-                );
-                break;
-            case 4:
-                buttons.push(
-                    <MathButton
-                        value={"-"}
-                        setCurrentCalc={props.setCurrentCalc}
-                        currentCalc={props.currentCalc}
-                    />,
-                );
-                break;
-            case 1:
-                buttons.push(
-                    <MathButton
-                        value={"+"}
-                        setCurrentCalc={props.setCurrentCalc}
-                        currentCalc={props.currentCalc}
-                    />,
-                );
-                break;
+    for (let i = 9; i > 0; i--) {
+        row.unshift(i);
+        console.log(row);
+        if (row.length === 3) {
+            row.forEach((e) => {
+                buttons.push(<MathButton value={e} />);
+                switch (e) {
+                    case 9:
+                        buttons.push(<MathButton value={"x"} />);
+                        break;
+                    case 6:
+                        buttons.push(<MathButton value={"-"} />);
+                        break;
+                    case 3:
+                        buttons.push(<MathButton value={"+"} />);
+                        break;
+                }
+            });
+            row = [];
+        }
+        if (i === 1) {
+            buttons.push(
+                <ChangeCalc img={CalcIcon} />,
+                <MathButton value={"0"} />,
+                <MathButton value={"."} />,
+                <MathButton value={"="} />,
+            );
         }
     }
 
