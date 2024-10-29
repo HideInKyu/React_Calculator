@@ -20,7 +20,6 @@ const BasicKeyPad = (props) => {
 
     for (let i = 9; i > 0; i--) {
         row.unshift(i);
-        console.log(row);
         if (row.length === 3) {
             row.forEach((e) => {
                 buttons.push(
